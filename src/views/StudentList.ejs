@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                <h1>Danh sách Student</h1>
+            </td>
+            <td colspan="2">
+                <button><a href="/addStudent">Thêm học sinh</a></button>
+            </td>
+        </tr>
+        <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>StudentCode</td>
+            <td>TheoryScore</td>
+            <td>PracticeScore</td>
+            <td>Describe</td>
+            <td>Assessment</td>
+            <td>StudentClass</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <% let count = 1 %>
+        <% if(typeof students !== undefined) {%>
+        <% students.forEach(student => { %>
+        <tr>
+            <td><%= student.count %></td>
+            <td><a href="/addStudent/<%= student.id %>"><%= student.name %></a></td>
+            <td><%= student.studentCode %></td>
+            <td><%= student.theoryScore %></td>
+            <td><%= student.practiceScore %></td>
+            <td><%= student.describe %></td>
+            <td><%= student.assessment %></td>
+            <td><%= student.StudentClass %></td>
+            <td><button><a href="/edit/<%= student.id %>">Edit</a></button></td>
+            <td><button><a href="/delete/<%= student.id %>">Delete</a></button></td>
+        </tr>
+        <% count++ %>
+        <% }); %>
+        <% } %>
+    </table>
+</body>
+
+</html>

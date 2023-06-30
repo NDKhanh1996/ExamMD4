@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+</head>
+<body>
+    <form action="" method="post">
+        <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" value="<%= student.name %>"></td>
+        </tr>
+        <tr>
+            <td>StudentClass</td>
+            <td><input type="text" name="StudentClass" value="<%= student.StudentClass %>"></td>
+        </tr>
+        <tr>
+            <td>theoryScore</td>
+            <td><input type="theoryScore" name="theoryScore" value="<%= student.theoryScore %>"></td>
+        </tr>
+        <tr>
+            <td>practiceScore</td>
+            <td><input type="text" name="practiceScore" value="<%= student.practiceScore %>"></td>
+        </tr>
+        <tr>
+            <td>assessment</td>
+            <td><input type="text" name="assessment" value="<%= student.assessment %>"></td>
+        </tr>
+        <tr>
+            <td>describe</td>
+            <td><input type="text" name="describe" value="<%= student.describe %>"></td>
+        </tr>
+    </table>
+    <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
